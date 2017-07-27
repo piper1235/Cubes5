@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cubes5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Cubes5" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -20,7 +20,19 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mZj-dC-Mos">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mZj-dC-Mos" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8nz-hH-8jM"/>
+                            <constraint firstAttribute="trailing" secondItem="mZj-dC-Mos" secondAttribute="trailing" id="Pen-os-60u"/>
+                            <constraint firstItem="mZj-dC-Mos" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cAE-Y4-RJm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mZj-dC-Mos" secondAttribute="bottom" id="dRY-5O-5GY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hv6-ru-MD7">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="yZp-XL-xC6">
@@ -29,6 +41,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="mZj-dC-Mos" id="5y8-pz-St1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
